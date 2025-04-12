@@ -1,12 +1,24 @@
-# React + Vite
+Este proyecto es un ejemplo de cómo integrar Google Maps con **React + Vite**, utilizando la API de Google Maps. El mapa muestra un marcador con la ubicacion de la Facultad de Informática Mazatlán y tiene una ventana de información.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cómo funciona: 
+- Carga del mapa centrado en la FIMAZ
+- Marcador en la ubicación especificada
+- Ventana de información al hacer clic en el marcador
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ ¿Cómo correr el proyecto localmente?
 
-## Expanding the ESLint configuration
+### 1. Clona el repositorio
+git clone https://github.com/tuusuario/mapa-google-react.git
+cd mapa-google-react
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Instala las dependencias
+npm install
+
+Crea un archivo .env en la raíz del proyecto con tu API Key:
+VITE_GOOGLE_MAPS_API_KEY=TU_API
+
+Corre el proyecto
+npm run dev
+
+
