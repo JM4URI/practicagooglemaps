@@ -1,16 +1,21 @@
-import { useState } from 'react'
+import { Routes, Route} from 'react-router-dom';
 import './App.css'
 import Mapa from './components/Mapa'
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Navbar from './components/Navbar'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div className="p-4">
-        <h1 className="text-2xl font-bold mb-4">Mapa con Google Maps</h1>
-        <Mapa />
-      </div>
+      <Navbar />
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/mapa" element={<Mapa />} />
+        </Routes>
     </>
   )
 }
