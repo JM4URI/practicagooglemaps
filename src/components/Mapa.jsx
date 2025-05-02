@@ -18,7 +18,7 @@ const destino = {
 
 const Mapa = () => {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: 'AIzaSyAWiyCiLAmLZz4rXarhHiXGAJJN2ym80uE',
+    googleMapsApiKey: '',
     libraries: ['places']
   });
 
