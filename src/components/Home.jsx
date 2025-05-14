@@ -14,6 +14,7 @@ function Home() {
             <button onClick={() => navigate('/about')}>Acerca de </button>
             <button onClick={() => navigate('/contact')}>Contacto</button>
             <button onClick={() => navigate('/mapa')}>Ir al Mapa</button>
+            <button onClick={() => navigate('/mapaClusters')}>Ir al Mapa con Clusters</button>
         </div>
     </>
   );

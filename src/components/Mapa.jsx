@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GoogleMap, useJsApiLoader, Marker, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
+import { GoogleMap, Marker, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100%',
@@ -17,11 +17,6 @@ const destino = {
 };
 
 const Mapa = () => {
-  const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: 'API',
-    libraries: ['places']
-  });
-
   const [directions, setDirections] = useState(null);
 
   const directionsCallback = ( response ) => {
@@ -34,7 +29,7 @@ const Mapa = () => {
     }
   };
 
-  return isLoaded ? (
+  return (
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={origen}
@@ -63,8 +58,6 @@ const Mapa = () => {
       <Marker position={destino} label="Machado" />
 
     </GoogleMap>
-  ) : (
-    <div>Cargando mapa...</div>
   );
 };
 

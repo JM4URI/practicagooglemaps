@@ -8,6 +8,7 @@ function Navbar() {
         <Link to="/about">Acerca de</Link>
         <Link to="/contact">Contacto</Link>
         <Link to="/mapa">Mapa</Link>
+        <Link to="/mapaClusters">Mapa con Clusters</Link>
       </nav>
     </>
   );
