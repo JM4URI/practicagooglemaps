@@ -7,16 +7,9 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar'
 import MapLoader from './components/MapLoader';
-import { useJsApiLoader } from "@react-google-maps/api";
+import MapContainer from './components/MapContainer';
 
 function App() {
-
-  const { isLoaded } = useJsApiLoader({
-        googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY
-    });
-
-    if (!isLoaded) return <p>Cargando mapa...</p>;
-
   return (
     <>
       <Navbar />
@@ -26,6 +19,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/mapa" element={<MapLoader><Mapa /></MapLoader>} />
             <Route path="/mapaClusters" element={<MapLoader><MapaConClusters /></MapLoader>} />
+            <Route path="/mapaDrawing" element={<MapLoader><MapContainer /></MapLoader>} />
         </Routes>
     </>
   )

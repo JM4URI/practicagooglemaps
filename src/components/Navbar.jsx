@@ -9,6 +9,7 @@ function Navbar() {
         <Link to="/contact">Contacto</Link>
         <Link to="/mapa">Mapa</Link>
         <Link to="/mapaClusters">Mapa con Clusters</Link>
+        <Link to="/mapaDrawing">Mapa con Drawing</Link>
       </nav>
     </>
   );
